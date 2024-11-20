@@ -1,0 +1,33 @@
+﻿@using MVCFirstClassWork.ViewModels
+@model ProductVM
+
+<table>
+    <thead>
+
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>DiscountPrice</th>
+        <th>Category</th>
+        <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        @foreach(var item in Model.Products){
+    <tr>
+        <td><img src="@item.Image" alt="Alternate Text" width="50%" /></td>
+        <td>@item.Name</td>
+        <td>@item.Description</td>
+        <td>@item.Price</td>
+        <td>@item.DisCountPrice</td>
+        <td>@item.Category</td>
+        <td>@item.Color</td>
+
+
+    </tr>
+        }
+    </tbody>
+</table>
